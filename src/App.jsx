@@ -1,17 +1,11 @@
-import { useState } from 'react'
-import { Button } from 'antd'
-import './App.css'
+import MyLayout from "./components/layouts/MyLayout";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div className='App'>
-        <Button type='primary'>Button</Button>
-      </div>
+      <MyLayout></MyLayout>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
