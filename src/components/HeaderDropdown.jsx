@@ -1,12 +1,19 @@
-import { ConfigProvider, Layout } from "antd";
+import { ConfigProvider, Dropdown, Space, Button } from "antd";
+import { CaretDownOutlined } from "@ant-design/icons";
 
-function App() {
+function HeaderDropdown({ items, children }) {
   return (
-    <ConfigProvider
-
-    >
+    <ConfigProvider>
+      <Dropdown menu={{ items }} trigger={["click"]}>
+        <Button type="text">
+          <Space>
+            {children}
+            <CaretDownOutlined />
+          </Space>
+        </Button>
+      </Dropdown>
     </ConfigProvider>
   );
 }
 
-export default App;
+export default HeaderDropdown;
